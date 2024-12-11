@@ -31,6 +31,9 @@
 
 <br>
 
+## Problems
+1. 解决Wandb没有权限访问的问题，需要注释掉config中的参数entity="theairlab",以及gaussian_splatting.py中的对应参数。
+
 ## Stay Tuned for a Faster and Better Variant of SplaTAM! 
 
 <!-- TABLE OF CONTENTS -->
@@ -96,6 +99,10 @@ We also provide a docker image. We recommend using a venv to run the code inside
 
 ```bash
 docker pull nkeetha/splatam:v1
+
+# 启动容器
+sudo docker run -it --gpus all --name splatam_container nkeetha/splatam:v1 bash
+
 bash bash_scripts/start_docker.bash
 cd /SplaTAM/
 pip install virtualenv --user
